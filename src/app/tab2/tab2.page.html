@@ -1,7 +1,11 @@
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ng-container *ngIf="notesArr?.length > 0; else noKeys">
+    <ng-container *ngFor="let note of notesArr">
+      <div class="m-2 pl-2 pb-2 rounded border-2 border-[#5260ff] flex flex-col">
+        <h3>{{note.title}}</h3>
+        <p>{{note.content}}</p>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-template #noKeys>You currently have no notes</ng-template>
 </ion-content>
