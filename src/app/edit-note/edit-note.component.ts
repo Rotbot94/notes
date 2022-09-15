@@ -44,4 +44,11 @@ export class EditNoteComponent implements OnInit {
     });
   }
 
+  async remove(key) {
+    await this.storage.remove(key);
+    this.router.navigate(['/tabs/tab2']).then(() => {
+      window.location.reload();
+    });
+  }
+
 }

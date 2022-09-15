@@ -28,7 +28,9 @@ export class NoteComponent {
       return;
     }
     await this.storage.set(this.note?.title, this.note?.content);
-    this.router.navigate(['/tabs/tab2']);
+    this.router.navigate(['/tabs/tab2']).then(() => {
+      window.location.reload();
+    });
   }
 
 }
