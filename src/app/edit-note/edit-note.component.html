@@ -1,0 +1,5 @@
+<div class="h-screen">
+  <ion-textarea class="border-b-2" required="true" rows="1" [(ngModel)]="note.title" name="title" placeholder="Title..."></ion-textarea>
+  <ion-textarea autofocus="true" required="true" rows="20" [(ngModel)]="note.content" name="content" autoGrow="true" class=" h-[10vh] relative" placeholder="Note"></ion-textarea>
+  <button (click)="edit()" class="z-10 absolute ml-[80%] mt-[145%] rounded-full bg-[#1f1f1f] h-[8vh] w-[65px]"><ion-icon class="text-3xl text-white active:text-[#6a64ff]" name="save"></ion-icon></button>
+</div>
