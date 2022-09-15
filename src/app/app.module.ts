@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import {NoteComponent} from './note/note.component';
 import {TabsPageModule} from './tabs/tabs.module';
 import { IonicStorageModule } from '@ionic/storage-angular';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import {EditNoteComponent} from  './edit-note/edit-note.component';
 
 @NgModule({
-  declarations: [AppComponent, NoteComponent], imports: [
+  declarations: [AppComponent, NoteComponent, EditNoteComponent], imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule, TabsPageModule, IonicStorageModule.forRoot(), FormsModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

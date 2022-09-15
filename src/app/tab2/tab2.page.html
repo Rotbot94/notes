@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <ng-container *ngIf="notesArr?.length > 0; else noKeys">
     <ng-container *ngFor="let note of notesArr">
-      <div class="m-2 pl-2 pb-2 rounded border-2 border-[#5260ff] flex flex-col">
+      <div (click)="openNote(note);" class="m-2 pl-2 pb-2 rounded border-2 shadow-[#5260ff] border-[#5260ff] flex flex-col shadow-md hover:shadow-none hover:border-[#fff]">
         <h3>{{note.title}}</h3>
         <p>{{note.content}}</p>
       </div>

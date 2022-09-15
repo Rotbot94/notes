@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { NoteComponent } from './note/note.component';
+import {EditNoteComponent} from './edit-note/edit-note.component';
 
 const routes: Routes = [
   {
     path: 'note',
     component: NoteComponent
+  },
+  {
+    path: 'edit-note',
+    component: EditNoteComponent
   },
   {
     path: '',
